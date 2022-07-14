@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: Column(
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 18),
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                   color: Colors.blue,
                 ),
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.only(top: 22),
                 height: 200,
                 width: double.infinity,
                 margin: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
@@ -59,16 +60,30 @@ class MyApp extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    Text(
-                      "Change currency",
-                      style: TextStyle(
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.blue[300],
+                      ),
+                      padding: EdgeInsets.all(12),
+                      child: Text(
+                        "Change currency",
+                        style: TextStyle(
                           color: Colors.white,
-                          backgroundColor: Colors.blue[200]),
+                        ),
+                      ),
                     ),
-                    Text(
-                      "10 monthly expenses",
-                      style: TextStyle(
-                        color: Colors.white,
+                    Container(
+                      color: Colors.blue[600],
+                      width: double.infinity,
+                      height: 40,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "10 monthly expenses",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                        ),
                       ),
                     ),
                   ],
@@ -78,6 +93,7 @@ class MyApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CircleAvatar(
                         backgroundColor: Colors.black,
@@ -86,7 +102,10 @@ class MyApp extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      Text("Statistics"),
+                      Text(
+                        "Statistics",
+                        style: TextStyle(height: 3),
+                      ),
                     ],
                   ),
                   SizedBox(
@@ -101,51 +120,73 @@ class MyApp extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      Text("Add"),
+                      Text(
+                        "Add",
+                        style: TextStyle(height: 3),
+                      ),
                     ],
                   ),
                 ],
               ),
-              Card(
-                margin: EdgeInsets.symmetric(horizontal: 18),
-                color: Colors.grey[300],
-                child: ListTile(
-                  title: Row(
-                    children: [
-                      Text("Apple TV+"),
-                      Icon(Icons.more_horiz),
-                    ],
-                  ),
-                  subtitle: Text("Entertainment"),
-                  trailing: Text("4.99"),
-                ),
-              ),
-              Card(
-                margin: EdgeInsets.symmetric(horizontal: 18),
-                color: Colors.grey[300],
-                child: ListTile(
-                  title: Row(
-                    children: [
-                      Text("Apple TV+"),
-                      Icon(Icons.more_horiz),
-                    ],
-                  ),
-                  subtitle: Text("Entertainment"),
-                  trailing: Text("4.99"),
-                ),
-              ),
-              Card(
-                margin: EdgeInsets.symmetric(horizontal: 18),
-                color: Colors.grey[300],
-                child: ListTile(
-                  title: Row(
-                    children: [
-                      Text("Apple TV+"),
-                      Icon(Icons.more_horiz),
-                    ],
-                  ),
-                  subtitle: Text("Entertainment"),
-                  trailing: Text("4.99"),
+              Container(
+                margin: EdgeInsets.only(top: 30),
+                child: Column(
+                  children: [
+                    Card(
+                      margin:
+                          EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+                      color: Colors.grey[300],
+                      child: ListTile(
+                        title: Row(
+                          children: [
+                            Text("Apple TV+"),
+                            Icon(Icons.more_horiz),
+                          ],
+                        ),
+                        subtitle: Text("Entertainment"),
+                        trailing: Text(
+                          "4.99",
+                          style: TextStyle(fontSize: 22),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      margin:
+                          EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+                      color: Colors.grey[300],
+                      child: ListTile(
+                        title: Row(
+                          children: [
+                            Text("Health Insurance"),
+                            Icon(Icons.more_horiz),
+                          ],
+                        ),
+                        subtitle: Text("Health"),
+                        trailing: Text(
+                          "89.49",
+                          style: TextStyle(fontSize: 22),
+                        ),
+                      ),
+                    ),
+                    Card(
+                      margin:
+                          EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+                      color: Colors.grey[300],
+                      child: ListTile(
+                        title: Row(
+                          children: [
+                            Text("Apple TV+"),
+                            Icon(Icons.more_horiz),
+                          ],
+                        ),
+                        subtitle: Text("Entertainment"),
+                        trailing: Text(
+                          "11.32",
+                          style: TextStyle(fontSize: 22),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
