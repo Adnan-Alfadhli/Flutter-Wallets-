@@ -40,20 +40,30 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Container(
-                color: Colors.blue,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: Colors.blue,
+                ),
+                padding: EdgeInsets.all(20),
+                height: 200,
+                width: double.infinity,
+                margin: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "904.91",
                       style: TextStyle(
                         color: Colors.white,
+                        fontSize: 32,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                     Text(
                       "Change currency",
                       style: TextStyle(
-                        color: Colors.white,
-                      ),
+                          color: Colors.white,
+                          backgroundColor: Colors.blue[200]),
                     ),
                     Text(
                       "10 monthly expenses",
@@ -65,16 +75,32 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Column(
                     children: [
-                      Icon(Icons.lock_clock),
+                      CircleAvatar(
+                        backgroundColor: Colors.black,
+                        child: Icon(
+                          Icons.lock_clock,
+                          color: Colors.white,
+                        ),
+                      ),
                       Text("Statistics"),
                     ],
                   ),
+                  SizedBox(
+                    width: 80,
+                  ),
                   Column(
                     children: [
-                      Icon(Icons.add),
+                      CircleAvatar(
+                        backgroundColor: Colors.black,
+                        child: Icon(
+                          Icons.add,
+                          color: Colors.white,
+                        ),
+                      ),
                       Text("Add"),
                     ],
                   ),
@@ -84,8 +110,42 @@ class MyApp extends StatelessWidget {
                 margin: EdgeInsets.symmetric(horizontal: 18),
                 color: Colors.grey[300],
                 child: ListTile(
-                  title: Text("Apple TV+"),
+                  title: Row(
+                    children: [
+                      Text("Apple TV+"),
+                      Icon(Icons.more_horiz),
+                    ],
+                  ),
                   subtitle: Text("Entertainment"),
+                  trailing: Text("4.99"),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(horizontal: 18),
+                color: Colors.grey[300],
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      Text("Apple TV+"),
+                      Icon(Icons.more_horiz),
+                    ],
+                  ),
+                  subtitle: Text("Entertainment"),
+                  trailing: Text("4.99"),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(horizontal: 18),
+                color: Colors.grey[300],
+                child: ListTile(
+                  title: Row(
+                    children: [
+                      Text("Apple TV+"),
+                      Icon(Icons.more_horiz),
+                    ],
+                  ),
+                  subtitle: Text("Entertainment"),
+                  trailing: Text("4.99"),
                 ),
               ),
             ],
